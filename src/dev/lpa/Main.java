@@ -6,17 +6,18 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        String[] originalArray = new String[]{"First", "Second", "Third"};
+        String[] originalArray = new String[]{"first", "Second", "Third"};
         var originalList = Arrays.asList(originalArray);
 
-        originalList.set(0, "one");
-        System.out.println("list:"+originalList);
+        originalList.set(0,"one");
+        System.out.println("list :"+originalList);
+        System.out.println("array :"+ Arrays.toString(originalArray));
+        originalList.sort(Comparator.naturalOrder());
         System.out.println("Array:"+Arrays.toString(originalArray));
 
-        originalList.sort(Comparator.naturalOrder());
-        System.out.println(Arrays.toString(originalArray));
+        //originalList.add("fourth");
 
-        List<String> newList= Arrays.asList("Sunday","Monday","Tuesday");
+        List<String> newList = Arrays.asList("Sunday","Monday","Tuesday");
         System.out.println(newList);
     }
 }
